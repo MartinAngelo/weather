@@ -1,18 +1,19 @@
-.profile h1,h2{
+.profile h1,
+h2 {
     text-align: center;
 }
 
-.about h2,p{
- 
-     
-        background-color: rgb(255, 255, 255);
-     
-        text-align     : center;
-        display        : block;
-      
-       
-        margin         : auto;
-        width          : 89%;
-   
-      
+.about h2,
+p {
+
+
+    background-color: rgb(255, 255, 255);
+
+    text-align: center;
+    display   : block;
+    align-items: center;
+    margin     : auto;
+    width      : 89%;
+
+
 }
