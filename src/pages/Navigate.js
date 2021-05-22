@@ -16,13 +16,17 @@ export default function Navigate() {
 
     return (
         <div class="navigate">
-            <h1 class="logo">faceboot</h1>
+           
             <ul>
-                <li><Link to="/home"> HOME </Link></li>
-                <li><Link to="/messages">MESSAGES</Link></li>
-                <li><Link to="/notifications">NOTIFICATIONS</Link></li>
+              
+                <li><button className="button" onClick={signout}>SIGN OUT</button></li>
+                <li><Link to="about">ABOUT</Link></li>
                 <li><Link to="/profile">PROFILE</Link></li>
-                <li><button class="sign" onClick={signout}>SIGN OUT</button></li>
+                <li><Link to="/home"> HOME </Link></li>
+
+               
+
+              
             </ul>
         </div>
     )

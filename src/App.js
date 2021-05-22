@@ -1,6 +1,4 @@
 import React, {useState, useEffect} from 'react'
-import './assets/stylesheets/App.css';
-import './assets/stylesheets/Style.css';
 
 
 import { BrowserRouter as Router, Redirect, Route, Switch } from "react-router-dom";
@@ -14,11 +12,16 @@ import firebase from "./utils/firebase";
 
 //Pages
 import Home from "./pages/Home";
-import Messages from "./pages/Messages"; 
-import Notifications from "./pages/Notifications"
 import Login from "./pages/Login";
 import Profile from "./pages/Profile";
 import Registration from "./pages/Registration";
+import About from "./pages/About";
+
+//css
+import "./Css/login.css";
+import "./Css/nav.css";
+import "./Css/home.css";
+import "./Css/profile.css";
 
 function App() {
 
@@ -58,9 +61,8 @@ function App() {
         <PublicRouter component={Registration} isAuth={state.isAuth} restricted={true} path="/registration" exact/>
         
         <PrivateRouter component={Home} isAuth={state.isAuth} path="/home" exact/>
-        <PrivateRouter component={Messages} isAuth={state.isAuth} path="/messages" exact/>
-        <PrivateRouter component={Notifications} isAuth={state.isAuth} path="/notifications" exact/>
         <PrivateRouter component={Profile} isAuth={state.isAuth} path="/profile"/>
+        <PrivateRouter component={About} isAuth={state.isAuth} path="/about"/>
       </Switch>
     </Router>
   );

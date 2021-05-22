@@ -8,24 +8,27 @@ export default function Profile() {
     const [state, setState] = useState({
         user: null
     })
-    
+
     useEffect(() => {
         var signedUser = firebase.auth().currentUser;
-    
+
         if (signedUser) {
             // User is signed in.
-            setState({user : signedUser})
+            setState({ user: signedUser })
         } else {
             // No user is signed in.
             setState(null)
         }
     }, [])
-    
+
     return (
-        <div>
-            <Navigate />
-            <p class="welcome"> </p>
-            <p class="tag">{state.user ? state.user.email : "null"}</p>
+        <div className="profile">
+            <div>
+                <Navigate />
+                <h1>Account Information</h1>
+                
+                <h2 class="tag">{state.user ? state.user.email : "null"}</h2>
+            </div>
         </div>
     )
 }
